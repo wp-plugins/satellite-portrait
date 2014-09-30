@@ -5,7 +5,7 @@ $portrait = $this->get_option('Portrait');
 $crop = $portrait['crop'];
 $cssClass = "";
 $cssWidth = "width";
-if (isset($portrait['bootstrap'])) {
+if (isset($portrait['bootstrap']) && $portrait['bootstrap']) {
     $cssClass = "col-md-3 col-sm-4 col-xs-6";
     $cssWidth = "max-width";
 }
@@ -14,12 +14,12 @@ if (!empty($slides)) : ?>
   <div id="portrait-slider">
     <?php foreach($slides as $slide):
     $imagelink = $Satellite->Html->image_url($slide->image);
-    $data = getimagesize($imagelink);
-    list($width,$height) = $data;
+    list($imagelink,$width,$height) = $Satellite->Image->getImageData($ID,$slide,false,$slide->source);
+
     $size = $Satellite->Image->imageStretchStyles($width, $height, $portrait['width'], $portrait['height'], $crop);
     $position = "absoluteCenter stretchCenter " .$size;
     ?>
-    <div class="portrait-container">
+    <div class="portrait-container" style="width: <?php echo(intval($portrait['width']+5));?>px">
         <div class="portrait-slide <?php echo($cssClass);?>" style="<?php echo ($cssWidth);?>: <?php echo($portrait['width']);?>px;height: <?php echo($portrait['height']);?>px">
             <img class="<?php echo($position);?>"src="<?php echo $imagelink; ?>"
                   alt="<?php echo $slide->title; ?>" />
@@ -39,5 +39,6 @@ if (!empty($slides)) : ?>
 
     <?php endforeach;?>
   </div>
+<div class="clearfix"></div>
     
 <?php endif;
