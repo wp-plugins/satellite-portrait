@@ -157,7 +157,8 @@ class SatellitePortraitPlugin
             'width' => '160',
             'height' => '180',
             'crop' => true,
-            'bootstrap' => false
+            'bootstrap' => false,
+            'bootstrap-css' => 'col-md-3 col-sm-4 col-xs-6'
         );
         $this->add_option('Portrait', $settings);
     }

@@ -4,10 +4,12 @@ $Satellite = new Satellite();
 $portrait = $this->get_option('Portrait');
 $crop = $portrait['crop'];
 $cssClass = "";
+$containCSS = "";
 $cssWidth = "width";
 if (isset($portrait['bootstrap']) && $portrait['bootstrap']) {
-    $cssClass = "col-md-3 col-sm-4 col-xs-6";
+    $cssClass = $portrait['bootstrap-css'];
     $cssWidth = "max-width";
+    $containCSS = "row";
 }
 
 if (!empty($slides)) : 
@@ -18,7 +20,8 @@ if (!empty($slides)) :
   ?>
   <div id="portrait-slider">
     <?php foreach($slides as $slide):
-    $imagelink = $Satellite->Html->image_url($slide->image);
+      
+//    $imagelink = $Satellite->Html->image_url($slide->image);
     list($slide->img_url,$width,$height) = $Satellite->Image->getImageData($slide->id,$slide,false,$Satellite->Gallery->data->source);
 
     $size = $Satellite->Image->imageStretchStyles($width, $height, $portrait['width'], $portrait['height'], $crop);
