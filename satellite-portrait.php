@@ -6,7 +6,7 @@
  * Author URI: http://c-pr.es
  * Description: Display Portraits in innovative ways using Satellite
  * License: GPL2
- * Version: 0.1
+ * Version: 0.2
  */
 
 /**
@@ -157,7 +157,8 @@ class SatellitePortraitPlugin
             'width' => '160',
             'height' => '180',
             'crop' => true,
-            'bootstrap' => false
+            'bootstrap' => false,
+            'bootstrap-css' => 'col-md-3 col-sm-4 col-xs-6'
         );
         $this->add_option('Portrait', $settings);
     }
