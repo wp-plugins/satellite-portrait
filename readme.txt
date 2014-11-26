@@ -1,10 +1,10 @@
 === Satellite Portrait ===
 Contributors: cpres
-Tags: 0.1
+Tags: 0.1,0.2
 Donate link: c-pr.es/satellite
-Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 0.1
+Requires at least: 3.1
+Tested up to: 4.0.1
+Stable tag: 0.2
 License: GPL
 
 Display portraits with titles, positions, and descriptions in these easy to use extension of Slideshow Satellite
@@ -34,6 +34,10 @@ Click on a slide from the Satellite Slide Manager. You should see a text field f
 Please see the Plugin Homepage for a working example and more information.
 
 == Changelog ==
+= 0.2 =
+* Fixed to Satellite 2.3 updates
+* Added fixed twitter bootstrap styling
+
 = 0.1 =
 * First Release!
 * Twitter Bootstrap support

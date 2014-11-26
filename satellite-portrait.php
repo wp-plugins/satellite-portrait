@@ -6,7 +6,7 @@
  * Author URI: http://c-pr.es
  * Description: Display Portraits in innovative ways using Satellite
  * License: GPL2
- * Version: 0.1
+ * Version: 0.2
  */
 
 /**

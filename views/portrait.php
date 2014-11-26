@@ -18,10 +18,9 @@ if (!empty($slides)) :
   $fontSize = $Satellite->Gallery->data->font;
 
   ?>
-  <div id="portrait-slider">
+  <div id="portrait-slider" class="<?php echo($containCSS);?>">
     <?php foreach($slides as $slide):
       
-//    $imagelink = $Satellite->Html->image_url($slide->image);
     list($slide->img_url,$width,$height) = $Satellite->Image->getImageData($slide->id,$slide,false,$Satellite->Gallery->data->source);
 
     $size = $Satellite->Image->imageStretchStyles($width, $height, $portrait['width'], $portrait['height'], $crop);
