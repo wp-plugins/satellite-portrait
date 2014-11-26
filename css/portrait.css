@@ -10,7 +10,7 @@
 #portrait-slider .portrait-container {
     float:left;
     padding-bottom: 3px;
-
+    margin-bottom:45px;
 }
 #portrait-slider .prt-person {
     font-size: 1.2em;

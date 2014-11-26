@@ -1,10 +1,10 @@
 === Satellite Portrait ===
 Contributors: cpres
-Tags: 0.1,0.2
+Tags: 0.1,0.2.1
 Donate link: c-pr.es/satellite
 Requires at least: 3.1
 Tested up to: 4.0.1
-Stable tag: 0.2
+Stable tag: 0.2.1
 License: GPL
 
 Display portraits with titles, positions, and descriptions in these easy to use extension of Slideshow Satellite
@@ -15,12 +15,15 @@ Displays beautifully laid out portraits or otherwise tiled pictures for display 
 Just create a new Satellite gallery and choose the theme \'Satellite Portrait\' to use! You\'ll see a new Configuration section for \'Satellite Portrait\' as well.
 
 == Installation ==
-Head to \'Plugins\' -> \'Add New\' in your WordPress Dashboard. From there search for \'satellite\' and install both Slideshow Satellite AND Satellite Portrait.
+Head to Plugins -> Add New in your WordPress Dashboard. From there search for \'satellite\' and install both Slideshow Satellite AND Satellite Portrait.
 
-Having \'Slideshow Satellite\' installed is required in order to use this plugin. Both plugins are free for download.
+Having *Slideshow Satellite* installed is required in order to use this plugin. Both plugins are free for download.
 
 == Frequently Asked Questions ==
 = Why do I need to install Slideshow Satellite first? =
+Slideshow Satellite handles the managing of galleries and slides. Why reinvent the wheel just for new display options?
+
+= Why Slideshow Satellite? =
 Slideshow Satellite has fantastic configuration capabilities, along with easily creating galleries, slides, reordering. This plugin has filters which makes it extendable for anyone to create new plugins to take advantage of this functionality.
 
 = How do I add a sub-title or position under a title? =
