@@ -1,4 +1,4 @@
-=== Satellite Portrait ===
+=== Satellite Panel ===
 Contributors: cpres
 Tags: 0.1
 Donate link: c-pr.es/satellite

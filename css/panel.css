@@ -1,0 +1,89 @@
+#portrait-slider {
+  width:100%;
+  font: 10pt normal Arial, sans-serif;  
+  height: auto;  
+  margin: 0 auto 0 auto;  
+  text-align: center; 
+  clear:both;
+  float:left;
+}
+#portrait-slider .portrait-container {
+  float:left;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 0;
+  margin-left: 0;
+}
+#portrait-slider .prt-person {
+    font-size: 1.2em;
+}
+.portrait-container p {
+    margin: 0;
+}
+
+#portrait-slider .portrait-slide {
+    cursor: pointer;
+    float: left;
+    margin: 5px 5px 5px 0;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background-size: cover;
+}
+
+.panel-info {
+  color: #FFF;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  width: auto;
+  text-align: left;
+}
+.panel-info h2 {
+  font-family: "proxima-nova", Arial, sans-serif;
+}
+.panel-info h2.size-4 {
+    font-size: 3.8em;
+}
+.panel-info h2.size-3 {
+    font-size: 3.2em;
+}
+.panel-info h2.size-2 {
+    font-size: 2.4em;
+}
+.upcoming-col {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.upcoming-col .white-wrap {
+  border: 2px solid #FFF;
+  padding: 5px 15px;  
+}
+.upcoming-col h4 {
+  text-transform: uppercase;
+  color: #FFF;
+}
+/* Slim Desktop */
+@media only screen and (max-width: 1090px){
+  .panel-info h2.size-4 {
+    font-size: 3.3em;
+  }
+  .panel-info h2.size-3 {
+    font-size: 3em; 
+  }
+  .panel-info h2.size-2 {
+    font-size: 2em;
+  }
+
+}
+/* Mobile Portrait */
+@media only screen and (max-width: 509px){
+
+}
