@@ -6,14 +6,15 @@ $crop = $portrait['crop'];
 $cssClass = "";
 $cssWidth = "width";
 if (isset($portrait['bootstrap']) && $portrait['bootstrap']) {
-    $cssClass = "col-sm-6 col-xs-12";
+    $cssClass = $portrait['bootstrap-css'];
     $cssWidth = "max-width";
+    $containCSS = "row";
 }
+
 
 if (!empty($slides)) : 
   $Satellite->Gallery->loadData($slides[0]->section);
   $fontSize = $Satellite->Gallery->data->font;
-  
   ?>
   <div id="portrait-slider">
     <?php foreach($slides as $slide):
@@ -29,9 +30,6 @@ if (!empty($slides)) :
                   height: <?php echo($portrait['height']);?>px;
                   background-image: url('<?php echo $slide->img_url; ?>');
                   ">
-        <div class="upcoming-col">
-          <h4 class="white-wrap">Upcoming Collections</h4>
-        </div>
         <div class="panel-info">
           <h2 class="size-<?php echo $fontSize;?>"><?php echo $slide->title; ?></h2>
           <p class="panel-description">

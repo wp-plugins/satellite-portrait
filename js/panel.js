@@ -6,27 +6,27 @@
  */
 
 jQuery(document).ready(function($) {
-//  
-//  slidePerson = function(e) {
-//    e.preventDefault();
-//
-//    if (!$(this).attr('data-toggled') || $(this).attr('data-toggled') == 'off'){
-//      $(this).attr('data-toggled','on');
-//      $(this).find($('.prt-caption')).fadeIn('fast');
-//    } else {
-//      $(this).attr('data-toggled','off');
-//      $(this).find($('.prt-caption')).fadeOut('slow');
-//    }
-//    
-//  }
-//  slideAway = function () {
-//    $(this).find($('.prt-caption')).fadeOut('slow');
-//    $(this).attr('data-toggled','off');
-//  }
-//  
-//  $('.portrait-slide').each( function() {
-//    $(this).on( "tap click", slidePerson );
-//    $(this).hover( slidePerson, slideAway );
-//  });
+  
+  slidePanel = function(e) {
+    e.preventDefault();
+
+    if (!$(this).attr('data-toggled') || $(this).attr('data-toggled') == 'off'){
+      $(this).attr('data-toggled','on');
+      $(this).find($('.panel-info')).fadeIn('fast');
+    } else {
+      $(this).attr('data-toggled','off');
+      $(this).find($('.panel-info')).fadeOut('slow');
+    }
+    
+  }
+  panelAway = function () {
+    $(this).find($('.panel-info')).fadeOut('slow');
+    $(this).attr('data-toggled','off');
+  }
+  
+  $('.portrait-slide').each( function() {
+    $(this).on( "tap click", slidePanel );
+    $(this).hover( slidePanel, panelAway );
+  });
   
 });

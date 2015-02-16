@@ -26,6 +26,12 @@ array(  "name"      => "Twitter Bootstrap Styling",
         "type"      => "checkbox",
         "value"     => $portrait['bootstrap'],
         "std"       => true),
+array(  "name"      => "Twitter Bootstrap Styles",
+        "desc"      => "The css classes we're using on each slide.",
+        "id"        => "bootstrap-css",
+        "type"      => "text",
+        "value"     => $portrait['bootstrap-css'],
+        "std"       => "col-md-3 col-sm-4 col-xs-6"),
 
     );
 ?>

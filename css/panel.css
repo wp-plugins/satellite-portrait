@@ -15,7 +15,7 @@
   padding-left: 0;
   margin-left: 0;
 }
-#portrait-slider .prt-person {
+#portraitf-slider .prt-person {
     font-size: 1.2em;
 }
 .portrait-container p {
@@ -57,19 +57,30 @@
 .panel-info h2.size-2 {
     font-size: 2.4em;
 }
-.upcoming-col {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+#portrait-slider .portrait-slide .panel-info {
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;  
+    color: #fff;  
+    z-index: 100;  
+    left: 0;  
+    display:none;
+    height:100%;
 }
-.upcoming-col .white-wrap {
-  border: 2px solid #FFF;
-  padding: 5px 15px;  
+#portrait-slider .portrait-slide .panel-info p {
+    padding: 2px;
 }
-.upcoming-col h4 {
-  text-transform: uppercase;
-  color: #FFF;
+
+#portrait-slider .portrait-slide .panel-info h3, #portrait-slider .portrait-slide .panel-info p {
+    position: relative;
 }
+#portrait-slider .portrait-slide .panel-info h3 {
+  font-size:1em;
+}
+.prt-caption {
+    width: 100%;
+}
+
+
 /* Slim Desktop */
 @media only screen and (max-width: 1090px){
   .panel-info h2.size-4 {
