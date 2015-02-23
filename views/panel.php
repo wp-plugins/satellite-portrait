@@ -1,16 +1,16 @@
 <?php
 
 $Satellite = new Satellite();
-$portrait = $this->get_option('Panel');
-$crop = $portrait['crop'];
+$panel_cfg = $this->get_option('Panel');
+$image_cfg = $this->get_option('Images');
+$crop = $panel_cfg['crop'];
 $cssClass = "";
 $cssWidth = "width";
-if (isset($portrait['bootstrap']) && $portrait['bootstrap']) {
-    $cssClass = $portrait['bootstrap-css'];
+if (isset($panel_cfg['bootstrap']) && $panel_cfg['bootstrap']) {
+    $cssClass = $panel_cfg['bootstrap-css'];
     $cssWidth = "max-width";
     $containCSS = "row";
 }
-
 
 if (!empty($slides)) : 
   $Satellite->Gallery->loadData($slides[0]->section);
@@ -21,13 +21,13 @@ if (!empty($slides)) :
 //    $imagelink = $Satellite->Html->image_url($slide->image);
     list($slide->img_url,$width,$height) = $Satellite->Image->getImageData($slide->id,$slide,false,$Satellite->Gallery->data->source);
 
-    $size = $Satellite->Image->imageStretchStyles($width, $height, $portrait['width'], $portrait['height'], $crop);
+    $size = $Satellite->Image->imageStretchStyles($width, $height, $panel_cfg['width'], $panel_cfg['height'], $crop);
     $position = "absoluteCenter stretchCenter " .$size;
     ?>
-    <div class="portrait-container <?php echo($cssClass);?>" style="<?php echo ($cssWidth);?>: <?php echo($portrait['width']);?>px;height: <?php echo($portrait['height']);?>px">
+    <div class="portrait-container <?php echo($cssClass);?>" style="<?php echo ($cssWidth);?>: <?php echo($panel_cfg['width']);?>px;height: <?php echo($panel_cfg['height']);?>px">
       <a href ="<?php echo($slide->link);?>" class="portrait-slide col-xs-12" 
-           style="<?php echo ($cssWidth);?>: <?php echo($portrait['width']);?>px;
-                  height: <?php echo($portrait['height']);?>px;
+           style="<?php echo ($cssWidth);?>: <?php echo($panel_cfg['width']);?>px;
+                  height: <?php echo($panel_cfg['height']);?>px;
                   background-image: url('<?php echo $slide->img_url; ?>');
                   ">
         <div class="panel-info">
